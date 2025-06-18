@@ -20,7 +20,7 @@ module TailwindDevise
       #devise_folder = File.dirname("#{Rails.root}/app/views/devise")
       devise_folder_path = "#{Rails.root}/app/views/devise"
       #FileUtils.mkdir_p(devise_folder) unless File.directory?(devise_folder)
-      FileUtils.rmdir_rf(devise_folder_path)
+      FileUtils.rm_rf(devise_folder_path)
       FileUtils.mkdir_p(devise_folder_path)
       directory 'devise', devise_folder_path
     end
